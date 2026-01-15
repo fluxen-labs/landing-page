@@ -5,9 +5,9 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Fluxen Labs | Consultoria de Engenharia e Automação Industrial',
-  description: 'Projetos de automação e integração operacional com escopo fechado e previsibilidade técnica. Conectamos seus sistemas industriais e automatizamos processos críticos.',
-  keywords: 'automação industrial, integração de sistemas, consultoria de engenharia, projetos técnicos, SCADA, PLC, MES',
+  title: 'Fluxen Labs | Engenharia de Automação, Integração e IA Aplicada',
+  description: 'Consultoria de engenharia hands-on para automação e integração operacional em ambientes críticos. Projetos fechados, entregas em produção, documentadas e monitoradas.',
+  keywords: 'engenharia de automação, integração de sistemas, IA aplicada, consultoria técnica, projetos fechados, operações críticas',
 }
 
 export default function RootLayout({
