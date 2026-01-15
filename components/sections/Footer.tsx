@@ -1,6 +1,7 @@
 'use client'
 
 import SectionContainer from '@/components/ui/SectionContainer'
+import Logo from '@/components/Logo'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -11,9 +12,9 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <h3 className="text-white text-lg font-bold mb-4">
-              Fluxen Labs
-            </h3>
+            <div className="mb-4">
+              <Logo variant="light" width={120} />
+            </div>
             <p className="text-sm leading-relaxed mb-4">
               Consultoria de engenharia hands-on para automação e integração operacional.
             </p>

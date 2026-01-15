@@ -8,6 +8,12 @@ export const metadata: Metadata = {
   title: 'Fluxen Labs | Engenharia de Automação, Integração e IA Aplicada',
   description: 'Consultoria de engenharia hands-on para automação e integração operacional em ambientes críticos. Projetos fechados, entregas em produção, documentadas e monitoradas.',
   keywords: 'engenharia de automação, integração de sistemas, IA aplicada, consultoria técnica, projetos fechados, operações críticas',
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon.svg', type: 'image/svg+xml' }
+    ],
+  },
 }
 
 export default function RootLayout({

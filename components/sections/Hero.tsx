@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import SectionContainer from '@/components/ui/SectionContainer'
+import Logo from '@/components/Logo'
 
 export default function Hero() {
   const proofPoints = [
@@ -35,6 +36,9 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98] }}
           >
+            <div className="mb-8">
+              <Logo variant="light" width={220} />
+            </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 tracking-tight">
               Engenharia de Automação para Operações Críticas
             </h1>
