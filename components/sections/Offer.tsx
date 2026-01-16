@@ -6,20 +6,25 @@ import FadeIn from '@/components/ui/FadeIn'
 
 export default function Offer() {
   const deliverables = {
-    producao: [
-      'Arquitetura de integração documentada',
-      'Conectores entre sistemas (ERP, WMS, CRMs, legados)',
-      'Automação de workflows e regras de negócio',
+    oqueFazemos: [
+      'Projetos de engenharia de automação sob medida (4–8 semanas)',
+      'Integração de sistemas corporativos (ERP, WMS, TMS, CRM, legados)',
+      'Pipelines de dados monitorados e workflows automatizados',
+      'Escopo fechado, bem definido e orientado a resultado operacional'
     ],
-    documentacao: [
-      'Pipelines de dados com observabilidade',
-      'Documentação técnica completa',
-      'Treinamento operacional da equipe'
+    comoFazemos: [
+      'Automação & Integração de sistemas com IA Aplicada',
+      'Soluções Omnichannel (Chatwoot, WhatsApp API)',
+      'Infraestrutura Cloud & Infra escalável e segura',
+      'BPO Tech para suporte técnico contínuo pós-projeto',
+      'Metodologia que combina tecnologia de ponta e pragmatismo operacional'
     ],
-    monitoramento: [
-      'Deploy em produção com monitoramento',
-      'Alertas configurados para falhas',
-      'Runbooks para operação'
+    oqueEntregamos: [
+      'Sistemas integrados em produção, 100% documentados e monitorados',
+      'Redução de retrabalho manual e eliminação de "gambiarras"',
+      'Visibilidade em tempo real sobre processos automatizados',
+      'Menos erros operacionais e tempos de ciclo mais curtos',
+      'Fluxos de trabalho estáveis com métricas de performance acordadas'
     ]
   }
 
@@ -36,11 +41,10 @@ export default function Offer() {
       <SectionContainer className="relative">
         <FadeIn className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-            Projeto de Automação e Integração Operacional
+            Solução – Fluxen Labs
           </h2>
           <p className="text-lg sm:text-xl text-neutral-100 max-w-3xl mx-auto leading-relaxed">
-            Integrações estruturadas entre sistemas. Automação de workflows operacionais. 
-            Pipelines de dados monitorados. Projeto fechado desde o início.
+            Diferente de consultorias tradicionais, não operamos com escopo aberto ou diagnósticos isolados – focamos em projetos de escopo fechado, bem definidos e orientados a entregar resultado operacional claro.
           </p>
         </FadeIn>
 
@@ -99,9 +103,9 @@ export default function Offer() {
         {/* Deliverables - 3 columns */}
         <div className="grid md:grid-cols-3 gap-6">
           {[
-            { title: 'Produção', items: deliverables.producao, icon: '🔧' },
-            { title: 'Documentação', items: deliverables.documentacao, icon: '📚' },
-            { title: 'Monitoramento', items: deliverables.monitoramento, icon: '📡' }
+            { title: 'O que fazemos', items: deliverables.oqueFazemos, icon: '🎯' },
+            { title: 'Como fazemos', items: deliverables.comoFazemos, icon: '⚙️' },
+            { title: 'O que entregamos', items: deliverables.oqueEntregamos, icon: '✅' }
           ].map((category, catIndex) => (
             <motion.div
               key={catIndex}

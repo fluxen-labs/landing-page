@@ -31,11 +31,10 @@ export default function CTA() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-            Próximo passo: proposta com escopo fechado
+            Vamos Conversar?
           </h2>
           <p className="text-lg sm:text-xl text-neutral-100 max-w-2xl mx-auto leading-relaxed">
-            Reunião técnica de 45–60 minutos para entender o contexto operacional. 
-            Enviamos proposta comercial com escopo fechado, prazo e investimento definidos.
+            Entre em contato para agendar uma reunião técnica gratuita (45–60 min). Sem qualquer custo ou compromisso inicial, nossos especialistas irão entender seu desafio e apresentar uma proposta de solução com escopo fechado, totalmente personalizada para a sua operação crítica.
           </p>
         </motion.div>
 
@@ -50,7 +49,7 @@ export default function CTA() {
           >
             <div>
               <h3 className="text-2xl font-bold mb-6">
-                O que você recebe após enviar
+                Transforme seu problema em um projeto de sucesso
               </h3>
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (

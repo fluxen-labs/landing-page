@@ -8,35 +8,35 @@ export default function Method() {
   const phases = [
     {
       number: '01',
-      title: 'Levantamento Direcionado',
+      title: 'Levantamento Inicial',
       duration: '1 semana',
-      objective: 'Validar interfaces, riscos e premissas técnicas',
-      outputs: ['Mapeamento de sistemas', 'Identificação de riscos', 'Validação de escopo'],
-      deliverable: 'Documento de arquitetura atual'
+      objective: 'Imersão no ambiente do cliente para mapear processos e necessidades',
+      outputs: ['Entrevistas com equipes', 'Análise de sistemas atuais', 'Identificação de pontos de integração', 'Oportunidades de automação'],
+      deliverable: 'Documento de requisitos claro e compartilhado, definindo escopo técnico detalhado e objetivos'
     },
     {
       number: '02',
       title: 'Projeto Executivo',
       duration: '1 semana',
-      objective: 'Definir arquitetura e fechar escopo técnico',
-      outputs: ['Especificação de conectores', 'Definição de APIs', 'Automações mapeadas'],
-      deliverable: 'Cronograma técnico detalhado'
+      objective: 'Elaborar arquitetura da solução e plano de implementação',
+      outputs: ['Fluxos de integração desenhados', 'Seleção de tecnologias (APIs, plataformas, IA)', 'Cronograma e responsáveis definidos', 'Critérios de sucesso estabelecidos'],
+      deliverable: 'Projeto técnico aprovado com diagramas, cronograma fechado (4–8 semanas) e plano de testes'
     },
     {
       number: '03',
       title: 'Implementação',
       duration: '2-4 semanas',
-      objective: 'Desenvolver e testar integrações e automações',
-      outputs: ['Conectores desenvolvidos', 'Workflows automatizados', 'Testes unitários e integração'],
-      deliverable: 'Sistema integrado em homologação'
+      objective: 'Desenvolvimento e validação contínua com o cliente',
+      outputs: ['Código desenvolvido', 'Integrações configuradas', 'Demos semanais e homologação', 'Documentação de uso e monitoramento'],
+      deliverable: 'Solução funcional em ambiente de teste/pré-produção, validada pelo cliente com total transparência'
     },
     {
       number: '04',
-      title: 'Entrega e Treinamento',
-      duration: '1-2 semanas',
-      objective: 'Deploy, validação e capacitação operacional',
-      outputs: ['Deploy em produção', 'Validação operacional', 'Treinamento técnico'],
-      deliverable: 'Sistema em produção + documentação'
+      title: 'Entrega e Monitoramento',
+      duration: '1 semana',
+      objective: 'Deploy em produção com acompanhamento próximo',
+      outputs: ['Deploy realizado', 'Transferência de conhecimento', 'Ferramentas de observabilidade ativadas', 'Logs, alertas e dashboards configurados'],
+      deliverable: 'Go-live bem-sucedido com solução estável, documentada, treinamento realizado e suporte pós-implantação'
     }
   ]
 

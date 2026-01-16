@@ -1,6 +1,7 @@
 import Hero from '@/components/sections/Hero'
 import Problem from '@/components/sections/Problem'
 import Offer from '@/components/sections/Offer'
+import Cases from '@/components/sections/Cases'
 import Method from '@/components/sections/Method'
 import Services from '@/components/sections/Services'
 import CTA from '@/components/sections/CTA'
@@ -12,6 +13,7 @@ export default function HomePage() {
       <Hero />
       <Problem />
       <Offer />
+      <Cases />
       <Method />
       <Services />
       <CTA />

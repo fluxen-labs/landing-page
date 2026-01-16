@@ -40,11 +40,10 @@ export default function Hero() {
               <Logo variant="light" width={220} />
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 tracking-tight">
-              Engenharia de Automação para Operações Críticas
+              Automação Inteligente para Operações Críticas
             </h1>
             <p className="text-lg sm:text-xl text-neutral-100 mb-8 leading-relaxed max-w-2xl">
-              Integrações entre ERP, WMS, TMS, CRMs e sistemas legados. Pipelines de dados estruturados. 
-              Automação de regras de negócio em ambientes produtivos. Escopo fechado, previsibilidade técnica.
+              Reduza riscos, elimine processos manuais e antecipe falhas conectando seus sistemas críticos de ponta a ponta. Fluxen Labs entrega integração de ERP, WMS, TMS, CRM e legados com escopo fechado e entregas técnicas claras, garantindo resultados operacionais concretos.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-6">
