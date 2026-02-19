@@ -1,23 +1,7 @@
-import Hero from '@/components/sections/Hero'
-import Problem from '@/components/sections/Problem'
-import Offer from '@/components/sections/Offer'
-import Cases from '@/components/sections/Cases'
-import Method from '@/components/sections/Method'
-import Services from '@/components/sections/Services'
-import CTA from '@/components/sections/CTA'
-import Footer from '@/components/sections/Footer'
-
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-neutral-50">
-      <Hero />
-      <Problem />
-      <Offer />
-      <Cases />
-      <Method />
-      <Services />
-      <CTA />
-      <Footer />
+    <main className="min-h-screen">
+      <h1>Fluxen Labs</h1>
     </main>
   )
 }
