@@ -46,7 +46,6 @@ export default function ElaraAnonymizer({
       return;
     }
     setIsLoading(true);
-    showMessage('success', 'Anonimizando texto...');
     try {
       const response = await fetch(`${apiUrl}`, {
         method: 'POST',
@@ -57,7 +56,7 @@ export default function ElaraAnonymizer({
       const data: AnonymizeResponse = await response.json();
       setAnonymizedText(data.anonymized_text);
       setEntities(data.entities);
-      showMessage('success', 'Texto anonimizado com sucesso!');
+      showMessage('success', 'Pronto! Dados sensíveis identificados e protegidos.');
       if (onSuccess) onSuccess(data);
     } catch (error) {
       const err = error as Error;
@@ -117,13 +116,30 @@ export default function ElaraAnonymizer({
               className="absolute right-0 top-0 select-none rounded-bl-lg rounded-tr-xl bg-neutral-800 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-neutral-100 transition-colors hover:bg-neutral-700 disabled:opacity-40"
               disabled={isLoading}
             >
-              {isLoading ? 'Enviando...' : 'Enviar'}
+              {isLoading ? (
+                <span className="flex items-center gap-1.5">
+                  <SpinnerIcon />
+                  Processando...
+                </span>
+              ) : 'Enviar'}
             </button>
           </div>
 
           {/* TEXTO ANONIMIZADO */}
-          <div className={`relative h-[400px] rounded-xl border border-neutral-800 bg-neutral-900 p-4 text-neutral-100 shadow-inner whitespace-pre-wrap ${anonymizedText ? 'overflow-y-auto pt-10' : ''}`}>
-            {anonymizedText ? (
+          <div className={`relative h-[400px] rounded-xl border border-neutral-800 bg-neutral-900 p-4 text-neutral-100 shadow-inner whitespace-pre-wrap ${anonymizedText || isLoading ? 'overflow-y-auto pt-10' : ''}`}>
+            {isLoading ? (
+              <div className="flex flex-col gap-3 pt-2">
+                <div className="h-3 rounded-full bg-neutral-700 animate-pulse w-full" />
+                <div className="h-3 rounded-full bg-neutral-700 animate-pulse w-5/6" />
+                <div className="h-3 rounded-full bg-neutral-700 animate-pulse w-4/6" />
+                <div className="h-3 rounded-full bg-neutral-700 animate-pulse w-full" />
+                <div className="h-3 rounded-full bg-neutral-700 animate-pulse w-3/4" />
+                <div className="h-3 rounded-full bg-neutral-700 animate-pulse w-2/3" />
+                <p className="pt-2 text-center text-xs text-neutral-500 animate-pulse">
+                  Identificando dados sensíveis...
+                </p>
+              </div>
+            ) : anonymizedText ? (
               anonymizedText
             ) : (
               <div className="flex h-full w-full select-none items-center justify-center text-center text-sm leading-relaxed text-neutral-500">
@@ -186,6 +202,31 @@ export default function ElaraAnonymizer({
         </div>
       </form>
     </>
+  );
+}
+
+function SpinnerIcon() {
+  return (
+    <svg
+      className="animate-spin h-3.5 w-3.5"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+    >
+      <circle
+        className="opacity-25"
+        cx="12"
+        cy="12"
+        r="10"
+        stroke="currentColor"
+        strokeWidth="4"
+      />
+      <path
+        className="opacity-75"
+        fill="currentColor"
+        d="M4 12a8 8 0 018-8V0C5.373 0 22 6.477 22 12h-4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+      />
+    </svg>
   );
 }
 
