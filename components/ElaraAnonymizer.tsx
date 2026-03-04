@@ -14,7 +14,7 @@ interface ElaraAnonymizerProps {
 }
 
 export default function ElaraAnonymizer({ 
-  apiUrl = '/api/anonymize',
+  apiUrl = 'https://elara-production-fd5b.up.railway.app',
   onSuccess,
   onError 
 }: ElaraAnonymizerProps) {
@@ -48,7 +48,7 @@ export default function ElaraAnonymizer({
     setIsLoading(true);
     showMessage('success', 'Anonimizando texto...');
     try {
-      const response = await fetch(apiUrl, {
+      const response = await fetch(`${apiUrl}/`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ text: originalText }),
