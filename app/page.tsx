@@ -408,7 +408,7 @@ export default function HomePage() {
         </section>
 
         {/* Para Quem É Section - Fundo Neutral-100 */}
-        <section id="para-quem-e" className="bg-neutral-100 section-spacing">
+        <section id="clientes" className="bg-neutral-100 section-spacing">
           <div className="container-custom">
             {/* Título da Seção */}
             <div className="text-center mb-16">
@@ -427,10 +427,10 @@ export default function HomePage() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold text-primary-slate mb-2">
-                  Empresas B2B
+                  Empresas B2B / B2C
                 </h3>
                 <p className="text-neutral-600 text-sm leading-relaxed">
-                  Operação comercial estruturada entre empresas
+                  Operação comercial entre empresas e clientes
                 </p>
               </div>
 
@@ -851,7 +851,7 @@ export default function HomePage() {
         </section>
 
         {/* CTA Final Section - Conversão Forte */}
-        <section id="cta-final" className="bg-primary-slate section-spacing">
+        <section id="agendar-diagnostico" className="bg-primary-slate section-spacing">
           <div className="container-custom">
             <div className="max-w-4xl mx-auto text-center">
               {/* Título Principal */}

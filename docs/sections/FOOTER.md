@@ -172,7 +172,7 @@ text-center text-neutral-500 text-sm
     <a href="#diagnostico" className="text-neutral-400 hover:text-white transition-colors text-sm">
       Diagnóstico
     </a>
-    <a href="#para-quem-e" className="text-neutral-400 hover:text-white transition-colors text-sm">
+    <a href="#clientes" className="text-neutral-400 hover:text-white transition-colors text-sm">
       Para Quem É
     </a>
     <a href="#casos" className="text-neutral-400 hover:text-white transition-colors text-sm">

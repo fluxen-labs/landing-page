@@ -5,7 +5,7 @@
 Seção de **qualificação de público** e **credibilidade técnica** com 4 perfis + 3 itens de autoridade.
 
 - **Background**: `bg-neutral-100`
-- **ID**: `#para-quem-e`  
+- **ID**: `#clientes`  
 - **Posição**: Entre "Metodologia" e "Diferenciais"
 
 ---
@@ -33,7 +33,7 @@ text-neutral-600        // Descrições
 ## 📦 Estrutura
 
 ```tsx
-<section id="para-quem-e" className="bg-neutral-100 section-spacing">
+<section id="clientes" className="bg-neutral-100 section-spacing">
   <div className="container-custom">
     {/* Título */}
     <div className="text-center mb-16">
@@ -240,7 +240,7 @@ className="... hover:border-primary-purple transition-all duration-300"
 
 Link para esta seção:
 ```tsx
-<a href="#para-quem-e">Para Quem É</a>
+<a href="#clientes">Para Quem É</a>
 ```
 
 ---
@@ -293,4 +293,4 @@ Os 3 itens antecipam dúvidas:
 
 ---
 
-**Para documentação completa**: `PARA-QUEM-E.md`
+**Para documentação completa**: `clientes.md`

@@ -6,7 +6,7 @@ Esta seção estabelece **qualificação de público** e **credibilidade técnic
 
 **Localização**: Entre "Metodologia" e "Diferenciais"  
 **Background**: `bg-neutral-100` (alternância com seções adjacentes)  
-**ID da Seção**: `#para-quem-e`
+**ID da Seção**: `#clientes`
 
 ---
 
@@ -317,7 +317,7 @@ className="grid md:grid-cols-3 gap-8"
 
 ```tsx
 {/* Para Quem É Section - Fundo Neutral-100 */}
-<section id="para-quem-e" className="bg-neutral-100 section-spacing">
+<section id="clientes" className="bg-neutral-100 section-spacing">
   <div className="container-custom">
     {/* Título da Seção */}
     <div className="text-center mb-16">
@@ -608,7 +608,7 @@ Para cards estáticos (sem hover):
 ### Semântica HTML
 
 ```tsx
-<section id="para-quem-e" className="...">
+<section id="clientes" className="...">
   <h2>Para quem é</h2>
   
   {/* Grid de perfis */}

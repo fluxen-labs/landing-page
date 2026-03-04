@@ -41,7 +41,7 @@ Seção de conversão final com foco total no CTA. Background escuro (primary-sl
 ## 💻 Template Base
 
 ```tsx
-<section id="cta-final" className="bg-primary-slate section-spacing">
+<section id="agendar-diagnostico" className="bg-primary-slate section-spacing">
   <div className="container-custom">
     <div className="max-w-4xl mx-auto text-center">
       {/* Título */}

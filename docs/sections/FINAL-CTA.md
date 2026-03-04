@@ -112,7 +112,7 @@ text-xl
 ### Seção Completa
 ```tsx
 {/* CTA Final Section - Conversão Forte */}
-<section id="cta-final" className="bg-primary-slate section-spacing">
+<section id="agendar-diagnostico" className="bg-primary-slate section-spacing">
   <div className="container-custom">
     <div className="max-w-4xl mx-auto text-center">
       {/* Título Principal */}
@@ -328,7 +328,7 @@ text-xl
 ### Semântica
 ```tsx
 <section 
-  id="cta-final" 
+  id="agendar-diagnostico" 
   aria-label="Chamada para ação final"
 >
   <h2><!-- Título --></h2>
@@ -378,7 +378,7 @@ transform group-hover:translate-x-1 transition-transform
 ### Implementar Fade-in Scroll
 ```tsx
 <section 
-  id="cta-final" 
+  id="agendar-diagnostico" 
   className="bg-primary-slate section-spacing opacity-0 animate-fadeIn"
 >
   <!-- ... -->
@@ -437,7 +437,7 @@ keyframes: {
 ### SEO
 ```tsx
 <section 
-  id="cta-final" 
+  id="agendar-diagnostico" 
   itemScope 
   itemType="https://schema.org/Service"
 >
@@ -649,7 +649,7 @@ Footer
 ### Acessibilidade
 - [ ] Contraste adequado (WCAG AAA)
 - [ ] Navegação por teclado funcionando
-- [ ] id="cta-final" para ancoragem
+- [ ] id="agendar-diagnostico" para ancoragem
 - [ ] Hierarquia h2 correta
 - [ ] Link semântico (não botão fake)
 

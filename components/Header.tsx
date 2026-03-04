@@ -24,7 +24,7 @@ export function Header() {
     { label: 'Diagnóstico', href: '/#diagnostico' },
     { label: 'Soluções', href: '/#construimos' },
     { label: 'Metodologia', href: '/#metodologia' },
-    { label: 'Para Quem É', href: '/#para-quem-e' },
+    { label: 'Para Quem É', href: '/#clientes' },
     { label: 'Casos', href: '/#casos' },
   ];
 
@@ -111,7 +111,7 @@ export function Header() {
 
           {/* CTA Button */}
           <Link
-            href="/#cta-final"
+            href="/#agendar-diagnostico"
             className="hidden lg:flex items-center gap-2 bg-primary-purple hover:bg-brand-purple text-white font-semibold px-5 py-2.5 rounded-lg transition-all duration-300 shadow-sm hover:shadow-lg hover:shadow-brand-purple/30"
           >
             <span>Agendar Diagnóstico</span>
@@ -133,7 +133,7 @@ export function Header() {
           {/* Mobile CTA + Menu Button */}
           <div className="flex lg:hidden items-center gap-3">
             <Link
-              href="/#cta-final"
+              href="/#agendar-diagnostico"
               className="bg-primary-purple hover:bg-brand-purple text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors duration-300"
             >
               Agendar
