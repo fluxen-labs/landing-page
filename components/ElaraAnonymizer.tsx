@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useMemo } from 'react';
+import { useState, useRef, useMemo, useEffect } from 'react';
 
 interface AnonymizeResponse {
   entities: Record<string, string[]>;
@@ -22,9 +22,18 @@ export default function ElaraAnonymizer({
   const [anonymizedText, setAnonymizedText] = useState('');
   const [llmResponse, setLlmResponse] = useState('');
   const [entities, setEntities] = useState<Record<string, string[]>>({});
-  const [isLoading, setIsLoading] = useState(false);
+  const [status, setStatus] = useState<'idle' | 'warming' | 'processing'>('idle');
   const [message, setMessage] = useState<{ type: 'success' | 'error' | 'warning'; text: string } | null>(null);
   
+  const isLoading = status !== 'idle';
+
+  // Se demorar mais de 5s, avisa que o servidor está acordando (cold start serverless)
+  useEffect(() => {
+    if (status !== 'warming') return;
+    const timer = setTimeout(() => setStatus('processing'), 5000);
+    return () => clearTimeout(timer);
+  }, [status]);
+
   const originalTextRef = useRef<HTMLTextAreaElement>(null);
 
   const deanonymizedText = useMemo(() => {
@@ -45,7 +54,7 @@ export default function ElaraAnonymizer({
       showMessage('warning', 'Por favor, insira algum texto para anonimizar.');
       return;
     }
-    setIsLoading(true);
+    setStatus('warming');
     try {
       const response = await fetch(`${apiUrl}`, {
         method: 'POST',
@@ -54,16 +63,21 @@ export default function ElaraAnonymizer({
       });
       if (!response.ok) throw new Error('Falha ao anonimizar texto');
       const data: AnonymizeResponse = await response.json();
-      setAnonymizedText(data.anonymized_text);
-      setEntities(data.entities);
-      showMessage('success', 'Pronto! Dados sensíveis identificados e protegidos.');
-      if (onSuccess) onSuccess(data);
+      if (!data.anonymized_text) {
+        setAnonymizedText(originalText);
+        showMessage('warning', 'Nenhuma informação pessoal identificada. O texto foi mantido como enviado.');
+      } else {
+        setAnonymizedText(data.anonymized_text);
+        setEntities(data.entities);
+        showMessage('success', 'Pronto! Dados sensíveis identificados e protegidos.');
+        if (onSuccess) onSuccess(data);
+      }
     } catch (error) {
       const err = error as Error;
       showMessage('error', 'Erro ao anonimizar. Verifique se o servidor Python está rodando.');
       if (onError) onError(err);
     } finally {
-      setIsLoading(false);
+      setStatus('idle');
     }
   };
 
@@ -136,7 +150,9 @@ export default function ElaraAnonymizer({
                 <div className="h-3 rounded-full bg-neutral-700 animate-pulse w-3/4" />
                 <div className="h-3 rounded-full bg-neutral-700 animate-pulse w-2/3" />
                 <p className="pt-2 text-center text-xs text-neutral-500 animate-pulse">
-                  Identificando dados sensíveis...
+                  {status === 'processing'
+                    ? 'Acordando o servidor, isso pode levar alguns segundos...'
+                    : 'Identificando dados sensíveis...'}
                 </p>
               </div>
             ) : anonymizedText ? (
