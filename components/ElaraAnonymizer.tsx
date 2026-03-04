@@ -14,7 +14,7 @@ interface ElaraAnonymizerProps {
 }
 
 export default function ElaraAnonymizer({ 
-  apiUrl = 'https://elara-production-fd5b.up.railway.app',
+  apiUrl = 'https://elara-production-fd5b.up.railway.app/anonymize',
   onSuccess,
   onError 
 }: ElaraAnonymizerProps) {
