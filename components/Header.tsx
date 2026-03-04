@@ -5,7 +5,7 @@
 
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -13,22 +13,11 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [toolsOpen, setToolsOpen] = useState(false);
-  const toolsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 10);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      if (toolsRef.current && !toolsRef.current.contains(e.target as Node)) {
-        setToolsOpen(false);
-      }
-    };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
   const navItems = [
@@ -81,9 +70,15 @@ export function Header() {
             ))}
 
             {/* Dropdown Ferramentas */}
-            <div className="relative" ref={toolsRef}>
+            <div className="relative">
+              {toolsOpen && (
+                <div
+                  className="fixed inset-0 z-[90]"
+                  onClick={() => setToolsOpen(false)}
+                />
+              )}
               <button
-                className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-neutral-100 hover:text-white hover:bg-neutral-800/50 rounded-md transition-all duration-200"
+                className="relative z-[91] flex items-center gap-1 px-4 py-2 text-sm font-medium text-neutral-100 hover:text-white hover:bg-neutral-800/50 rounded-md transition-all duration-200"
                 onClick={() => setToolsOpen((prev) => !prev)}
               >
                 Ferramentas
