@@ -30,7 +30,7 @@ export default function HomePage() {
                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
                   {/* CTA Principal */}
                   <a
-                    href="https://web.whatsapp.com/send?phone=554791791018&text=Ol%C3%A1%2C%20gostaria%20de%20conhecer%20melhor%20a%20Fluxen%20Labs."
+                    href="https://wa.me/554791791018?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20diagn%C3%B3stico%20t%C3%A9cnico%20com%20a%20Fluxen%20Labs."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 bg-primary-purple hover:bg-brand-purple text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-brand-purple/30"
@@ -560,7 +560,7 @@ export default function HomePage() {
                 },
                 {
                   title: 'Suporte Especializado',
-                  description: 'Time técnico disponível para suporte e evolução contínua dos projetos.',
+                  description: 'Acesso direto ao consultor sênior responsável pelo projeto — sem intermediários, do diagnóstico à evolução contínua.',
                 },
               ].map((item, index) => (
                 <div
@@ -592,10 +592,10 @@ export default function HomePage() {
             {/* Cabeçalho */}
             <div className="text-center mb-20">
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">
-                Arquiteturas implementadas em operações reais
+                Como atuamos na prática
               </h2>
               <p className="text-xl md:text-2xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
-                Integrações profundas que eliminaram gargalos estruturais — não apenas tarefas manuais.
+                Cenários representativos do tipo de intervenção que realizamos — baseados em padrões reais de operação.
               </p>
             </div>
 
@@ -605,6 +605,9 @@ export default function HomePage() {
               <article className="bg-neutral-50 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
                 {/* Header do Case */}
                 <div className="bg-primary-purple/5 px-8 py-6 border-b border-neutral-200">
+                  <span className="inline-block text-xs font-semibold uppercase tracking-wider text-neutral-500 bg-neutral-200 px-2.5 py-1 rounded-full mb-3">
+                    Cenário ilustrativo
+                  </span>
                   <h3 className="text-2xl font-bold text-neutral-900">
                     Distribuidor B2B com ERP e vendas via WhatsApp
                   </h3>
@@ -702,18 +705,11 @@ export default function HomePage() {
                       </li>
                     </ul>
 
-                    {/* Métricas */}
+                    {/* Resultado qualitativo */}
                     <div className="pt-4 mt-4 border-t border-neutral-200">
-                      <div className="grid grid-cols-2 gap-3">
-                        <div className="bg-white p-3 rounded-lg">
-                          <div className="text-2xl font-bold text-accent-green">+37%</div>
-                          <div className="text-xs text-neutral-500">eficiência operacional</div>
-                        </div>
-                        <div className="bg-white p-3 rounded-lg">
-                          <div className="text-2xl font-bold text-accent-cyan">-62%</div>
-                          <div className="text-xs text-neutral-500">erros manuais</div>
-                        </div>
-                      </div>
+                      <p className="text-sm text-neutral-600 leading-relaxed">
+                        <span className="font-semibold text-neutral-900">Resultado esperado:</span> eliminação de digitação manual e operação independente de pessoas específicas.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -723,6 +719,9 @@ export default function HomePage() {
               <article className="bg-neutral-50 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
                 {/* Header do Case */}
                 <div className="bg-primary-purple/5 px-8 py-6 border-b border-neutral-200">
+                  <span className="inline-block text-xs font-semibold uppercase tracking-wider text-neutral-500 bg-neutral-200 px-2.5 py-1 rounded-full mb-3">
+                    Cenário ilustrativo
+                  </span>
                   <h3 className="text-2xl font-bold text-neutral-900">
                     E-commerce com atendimento híbrido (site + WhatsApp)
                   </h3>
@@ -820,18 +819,11 @@ export default function HomePage() {
                       </li>
                     </ul>
 
-                    {/* Métricas */}
+                    {/* Resultado qualitativo */}
                     <div className="pt-4 mt-4 border-t border-neutral-200">
-                      <div className="grid grid-cols-2 gap-3">
-                        <div className="bg-white p-3 rounded-lg">
-                          <div className="text-2xl font-bold text-accent-green">+28%</div>
-                          <div className="text-xs text-neutral-500">taxa de conversão</div>
-                        </div>
-                        <div className="bg-white p-3 rounded-lg">
-                          <div className="text-2xl font-bold text-accent-cyan">-71%</div>
-                          <div className="text-xs text-neutral-500">erros de estoque</div>
-                        </div>
-                      </div>
+                      <p className="text-sm text-neutral-600 leading-relaxed">
+                        <span className="font-semibold text-neutral-900">Resultado esperado:</span> visão unificada de estoque e cliente entre canais.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -861,7 +853,7 @@ export default function HomePage() {
 
               {/* Botão CTA Grande */}
               <a
-                href="https://web.whatsapp.com/send?phone=554791791018&text=Ol%C3%A1%2C%20gostaria%20de%20conhecer%20melhor%20a%20Fluxen%20Labs."
+                href="https://wa.me/554791791018?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20diagn%C3%B3stico%20t%C3%A9cnico%20com%20a%20Fluxen%20Labs."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-3 bg-primary-purple hover:bg-brand-purple text-white font-bold px-12 py-6 rounded-lg transition-all duration-300 shadow-2xl hover:shadow-brand-purple/50 text-xl group"
