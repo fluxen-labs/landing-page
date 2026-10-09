@@ -12,9 +12,8 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Fluxen Labs | Engenharia de Automação, Integração e IA Aplicada',
-  description: 'Consultoria de engenharia hands-on para automação e integração operacional em ambientes críticos. Projetos fechados, entregas em produção, documentadas e monitoradas.',
-  keywords: 'engenharia de automação, integração de sistemas, IA aplicada, consultoria técnica, projetos fechados, operações críticas',
+  title: 'Fluxen Labs | Automação e sistemas sob medida para empresas',
+  description: 'Descubra o que dá para automatizar na sua empresa. Integração com ERP e WhatsApp, sistemas sob medida e IA aplicada. Diagnóstico técnico sem compromisso.',
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
