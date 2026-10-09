@@ -1,4 +1,5 @@
 import { Header } from '@/components/Header';
+import { MethodAnimation } from '@/components/MethodAnimation';
 import {
   WHATSAPP_DIAGNOSTICO_URL,
   WHATSAPP_URL,
@@ -197,7 +198,9 @@ export default function HomePage() {
             Primeiro o processo, depois a tecnologia
           </h2>
 
-          <ol className="mt-14 grid md:grid-cols-3 gap-px bg-neutral-800 border border-neutral-800">
+          <MethodAnimation />
+
+          <ol className="grid md:grid-cols-3 gap-px bg-neutral-800 border border-neutral-800">
             {etapas.map((e) => (
               <li key={e.n} className="bg-primary-slate p-6 md:p-8">
                 <span className="text-sm font-semibold text-accent-cyan tabular-nums">{e.n}</span>

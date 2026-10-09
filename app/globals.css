@@ -109,3 +109,98 @@
     scroll-behavior: auto !important;
   }
 }
+
+/* ===== Metodologia animada (components/MethodAnimation.tsx) ===== */
+.fx-method {
+  --fx-navy: #0F172A;
+  --fx-card: #1E293B;
+  --fx-white: #FFFFFF;
+  --fx-muted: rgba(241, 245, 249, .7);
+  --fx-quiet: #64748B;
+  --fx-faint: rgba(255, 255, 255, .12);
+  --fx-accent: #6D28D9;
+  --fx-accent-hover: #5B21B6;
+  --fx-highlight: #06B6D4;
+  margin: 56px 0 72px;
+  color: var(--fx-white);
+}
+.fx-method .fx-inner{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:64px;align-items:center}
+
+.fx-method .fx-pill{display:inline-block;background:var(--fx-accent);color:var(--fx-white);font-size:13px;font-weight:600;line-height:1;letter-spacing:.06em;text-transform:uppercase;padding:11px 20px;border-radius:999px}
+.fx-method .fx-step-copy h3{font-size:clamp(34px,4.2vw,54px);font-weight:600;line-height:1.06;letter-spacing:-.02em;margin:30px 0 26px}
+.fx-method .fx-step-copy hr{width:40px;border:0;border-top:2px solid var(--fx-white);margin:0 0 24px}
+.fx-method .fx-step-copy p{font-size:18px;line-height:1.55;color:var(--fx-muted);margin:0;max-width:32ch}
+
+.fx-method .fx-cta{display:inline-flex;align-items:center;gap:10px;margin-top:36px;background:var(--fx-accent);color:var(--fx-white);font-size:15px;font-weight:600;line-height:1;text-decoration:none;padding:16px 24px;border-radius:6px;transition:transform .2s ease,background-color .2s ease}
+.fx-method .fx-cta:hover{transform:translateY(-2px);background:var(--fx-accent-hover)}
+.fx-method .fx-cta svg{width:16px;height:16px}
+
+.fx-method .fx-stage svg{display:block;width:100%;height:auto}
+
+/* Progresso */
+.fx-method .fx-progress{display:flex;align-items:flex-end;gap:20px;margin-top:64px}
+.fx-method .fx-step-btn{flex:1;min-width:0;background:none;border:0;padding:0;text-align:left;color:var(--fx-quiet);font-size:13px;font-weight:500;line-height:1.2;cursor:pointer;transition:color .3s}
+.fx-method .fx-step-btn .fx-bar{display:block;position:relative;height:2px;border-radius:2px;background:var(--fx-faint);overflow:hidden;margin-bottom:14px}
+.fx-method .fx-step-btn .fx-bar i{position:absolute;inset:0;background:var(--fx-white);transform:scaleX(0);transform-origin:left}
+.fx-method .fx-step-btn.is-active,.fx-method .fx-step-btn:hover{color:var(--fx-white)}
+.fx-method .fx-step-btn span.fx-n{color:var(--fx-quiet);margin-right:6px}
+.fx-method .fx-replay{flex:none;width:40px;height:40px;border-radius:50%;border:1px solid var(--fx-faint);background:none;color:var(--fx-white);display:grid;place-items:center;cursor:pointer;transition:border-color .3s}
+.fx-method .fx-replay:hover{border-color:var(--fx-muted)}
+.fx-method .fx-replay svg{width:16px;height:16px}
+.fx-method .fx-step-btn:focus-visible,.fx-method .fx-replay:focus-visible,.fx-method .fx-cta:focus-visible{outline:2px solid var(--fx-highlight);outline-offset:4px}
+
+/* Estados com animação ativa (sem JS, o conteúdo aparece como lista) */
+.fx-method.anim .fx-steps-copy{display:grid}
+.fx-method.anim .fx-step-copy{grid-area:1/1;opacity:0}
+.fx-method.anim .fx-cta{opacity:0;visibility:hidden}
+.fx-method:not(.anim) .fx-step-copy + .fx-step-copy{margin-top:48px}
+.fx-method:not(.anim) .fx-stage,.fx-method:not(.anim) .fx-progress{display:none}
+
+/* SVG */
+.fx-method .fx-stage .card{fill:var(--fx-card);stroke:var(--fx-faint);stroke-width:1}
+.fx-method .t-cap{font-size:10.5px;font-weight:600;letter-spacing:.14em;fill:var(--fx-muted)}
+.fx-method .t-who{font-size:10.5px;font-weight:600;letter-spacing:.14em}
+.fx-method .t-who.c{fill:var(--fx-highlight)} .fx-method .t-who.f{fill:var(--fx-quiet)}
+.fx-method .t-quote{font-size:19px;font-weight:500;fill:var(--fx-white)}
+.fx-method .bar{fill:var(--fx-white)}
+.fx-method #fx-bars-f .bar{fill:var(--fx-quiet)}
+.fx-method .ecg{fill:none;stroke:var(--fx-white);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+
+.fx-method .node-box{fill:var(--fx-card);stroke:var(--fx-white);stroke-width:1.5}
+.fx-method .ring{fill:none;stroke:var(--fx-highlight);stroke-width:1.5}
+.fx-method .t-node{font-size:15px;font-weight:600;fill:var(--fx-white)}
+.fx-method .t-sub{font-size:11.5px;fill:var(--fx-muted)}
+.fx-method .conn,.fx-method .head{fill:none;stroke:var(--fx-muted);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.fx-method .t-tag{font-size:9.5px;font-weight:700;letter-spacing:.12em}
+.fx-method .tag-g rect{fill:var(--fx-highlight)} .fx-method .tag-g text{fill:var(--fx-navy)}
+.fx-method .tag-m rect{fill:none;stroke:var(--fx-quiet)} .fx-method .tag-m text{fill:var(--fx-muted)}
+.fx-method .t-note{font-size:13px;fill:var(--fx-muted)}
+
+.fx-method .row-box{fill:var(--fx-card);stroke:var(--fx-faint);stroke-width:1}
+.fx-method .t-row{font-size:15.5px;fill:var(--fx-white)}
+.fx-method .base-c{fill:none;stroke:rgba(255,255,255,.25);stroke-width:1.5}
+.fx-method .chk-fill{fill:var(--fx-accent)}
+.fx-method .chk-mark{fill:none;stroke:var(--fx-white);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.fx-method .banner rect{fill:var(--fx-accent)}
+.fx-method .banner text{font-size:15px;font-weight:600;fill:var(--fx-white)}
+
+.fx-method .doc{fill:none;stroke:var(--fx-white);stroke-width:1.6;stroke-linejoin:round}
+.fx-method .doc-line{stroke:rgba(255,255,255,.5);stroke-width:2;stroke-linecap:round}
+.fx-method .inv-bar{stroke:var(--fx-highlight);stroke-width:8;stroke-linecap:round}
+.fx-method .sig{fill:none;stroke:var(--fx-white);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.fx-method .sig-line{stroke:rgba(255,255,255,.3);stroke-width:1}
+.fx-method .t-doc{font-size:20px;font-weight:600;fill:var(--fx-white)}
+.fx-method .t-small{font-size:13px;fill:var(--fx-white)}
+.fx-method .dtag rect{fill:var(--fx-card);stroke:var(--fx-faint)}
+.fx-method .dtag-chk{fill:none;stroke:var(--fx-highlight);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.fx-method .dtag-line{stroke:var(--fx-faint);stroke-width:1.5}
+
+@media (max-width:860px){
+  .fx-method{margin:40px 0 56px}
+  .fx-method .fx-inner{grid-template-columns:1fr;gap:36px}
+  .fx-method .fx-step-copy h3{margin:22px 0 20px}
+  .fx-method .fx-step-copy p{font-size:16px}
+  .fx-method .fx-progress{gap:10px;margin-top:40px}
+  .fx-method .fx-step-btn{font-size:11px}
+  .fx-method .fx-step-btn span.fx-n{display:none}
+}
