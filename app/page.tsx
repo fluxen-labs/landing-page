@@ -1,5 +1,6 @@
 import { Header } from '@/components/Header';
 import { MethodAnimation } from '@/components/MethodAnimation';
+import { AudienceAnimation } from '@/components/AudienceAnimation';
 import {
   WHATSAPP_DIAGNOSTICO_URL,
   WHATSAPP_URL,
@@ -155,18 +156,10 @@ export default function HomePage() {
         {/* 2. Para quem é */}
         <Section id="para-quem-e" tone="light">
           <Label>PARA QUEM É</Label>
-          <Title>Para empresas que cresceram mais rápido que a própria estrutura</Title>
-
-          <div className="mt-14 grid md:grid-cols-3 border-t border-l border-primary-slate/10">
-            {sinais.map((s) => (
-              <div key={s.title} className="border-r border-b border-primary-slate/10 p-6 md:p-8">
-                <h3 className="text-xl font-semibold">{s.title}</h3>
-                <p className="mt-3 text-neutral-800 leading-relaxed">{s.text}</p>
-              </div>
-            ))}
-          </div>
-
-          <p className="mt-10 text-lg md:text-xl font-semibold">Reconheceu algum? É por aí que a gente começa.</p>
+          <AudienceAnimation
+            title="Para empresas que cresceram mais rápido que a própria estrutura"
+            sinais={sinais}
+          />
         </Section>
 
         {/* 3. O que dá para automatizar */}

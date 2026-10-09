@@ -204,3 +204,72 @@
   .fx-method .fx-step-btn{font-size:11px}
   .fx-method .fx-step-btn span.fx-n{display:none}
 }
+
+/* ===== Para quem é animada (components/AudienceAnimation.tsx) ===== */
+.fx-aud {
+  --fx2-ink: #0F172A;
+  --fx2-body: #475569;
+  --fx2-mute: #94A3B8;
+  --fx2-line: rgba(15, 23, 42, .1);
+  --fx2-guide: #E2E8F0;
+  --fx2-accent: #6D28D9;
+  --fx2-accent-soft: #F5F3FF;
+}
+.fx-aud .fx2-top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}
+
+.fx-aud .fx2-stage{position:relative;margin-top:24px}
+.fx-aud .fx2-stage > svg{display:block;width:100%;height:auto;overflow:visible}
+.fx-aud .fx2-replay{position:absolute;right:0;bottom:-8px;width:36px;height:36px;border-radius:50%;border:1px solid var(--fx2-line);background:#fff;color:var(--fx2-body);display:grid;place-items:center;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s,border-color .3s}
+.fx-aud .fx2-replay.is-on{opacity:1;pointer-events:auto}
+.fx-aud .fx2-replay:hover{border-color:var(--fx2-mute)}
+.fx-aud .fx2-replay svg{width:14px;height:14px}
+.fx-aud .fx2-replay:focus-visible{outline:2px solid var(--fx2-accent);outline-offset:3px}
+
+.fx-aud .fx2-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid var(--fx2-line);margin-top:56px}
+.fx-aud .fx2-card{position:relative;padding:32px;background:#fff}
+.fx-aud .fx2-card + .fx2-card{border-left:1px solid var(--fx2-line)}
+.fx-aud .fx2-cardbar{position:absolute;left:-1px;right:-1px;top:-1px;height:2px;background:var(--fx2-accent);transform:scaleX(0);transform-origin:left}
+
+/* Sem JS/GSAP: a animação some, título e cards continuam */
+.fx-aud:not(.anim) .fx2-stage{display:none}
+.fx-aud:not(.anim) .fx2-top{grid-template-columns:1fr}
+
+/* SVG */
+.fx-aud .fx2-person circle,.fx-aud .fx2-person path{fill:#fff;stroke:var(--fx2-ink);stroke-width:1.8;stroke-linejoin:round}
+.fx-aud .fx2-ghost circle,.fx-aud .fx2-ghost path{fill:none;stroke:var(--fx2-mute);stroke-width:1.5;stroke-dasharray:3 3}
+.fx-aud .obj{fill:#fff;stroke:var(--fx2-ink);stroke-width:1.8;stroke-linejoin:round}
+.fx-aud .obj-line{stroke:var(--fx2-guide);stroke-width:1.2}
+.fx-aud .sheet-head{fill:var(--fx2-accent-soft)}
+.fx-aud .guide{fill:none;stroke:var(--fx2-guide);stroke-width:1.5;stroke-linecap:round}
+.fx-aud .desk{stroke:var(--fx2-ink);stroke-width:1.8;stroke-linecap:round}
+.fx-aud .lbl{font-size:10px;font-weight:500;fill:var(--fx2-mute)}
+.fx-aud .erp-t{font-size:13px;font-weight:700;fill:var(--fx2-ink);letter-spacing:.04em}
+.fx-aud .leg{font-size:9.5px;font-weight:500;fill:var(--fx2-body)}
+.fx-aud .axis{stroke:var(--fx2-guide);stroke-width:1}
+.fx-aud .c-dem{fill:none;stroke:var(--fx2-accent);stroke-width:2.2;stroke-linecap:round}
+.fx-aud .c-est{fill:none;stroke:var(--fx2-mute);stroke-width:2.2;stroke-linecap:round}
+.fx-aud .dot{fill:var(--fx2-accent)}
+.fx-aud .bubble{fill:var(--fx2-accent-soft);stroke:var(--fx2-accent);stroke-width:1.2}
+.fx-aud .sheet{fill:#fff;stroke:var(--fx2-ink);stroke-width:1.2}
+.fx-aud .nf{fill:#fff;stroke:var(--fx2-accent);stroke-width:1.2}
+.fx-aud .typing{fill:var(--fx2-ink)}
+.fx-aud .tag rect{fill:var(--fx2-accent)}
+.fx-aud .tag text{font-size:10px;font-weight:600;fill:#fff;letter-spacing:.03em}
+.fx-aud .tag.dark rect{fill:var(--fx2-ink)}
+.fx-aud .price rect{fill:var(--fx2-accent-soft);stroke:var(--fx2-accent);stroke-width:1}
+.fx-aud .price text{font-size:9.5px;font-weight:600;fill:var(--fx2-accent)}
+
+@media (max-width:860px){
+  .fx-aud .fx2-top{grid-template-columns:1fr;gap:28px}
+  .fx-aud .fx2-stage{margin-top:0}
+  .fx-aud .fx2-replay{width:40px;height:40px;bottom:-16px}
+  .fx-aud .fx2-cards{grid-template-columns:1fr;margin-top:44px}
+  .fx-aud .fx2-card{padding:26px 22px}
+  .fx-aud .fx2-card + .fx2-card{border-left:0;border-top:1px solid var(--fx2-line)}
+  /* O SVG encolhe ~0,65x no celular: textos maiores para continuarem legíveis */
+  .fx-aud .lbl{font-size:13px}
+  .fx-aud .leg{font-size:12px}
+  .fx-aud .erp-t{font-size:15px}
+  .fx-aud .tag text{font-size:12.5px}
+  .fx-aud .price text{font-size:12px}
+}
