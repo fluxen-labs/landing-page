@@ -1,6 +1,8 @@
 import { Header } from '@/components/Header';
 import {
   WHATSAPP_DIAGNOSTICO_URL,
+  WHATSAPP_URL,
+  WHATSAPP_NUMERO,
   EMAIL,
   LINKEDIN_URL,
   INSTAGRAM_FLUXEN_URL,
@@ -342,6 +344,16 @@ export default function HomePage() {
               <li>
                 <a href={`mailto:${EMAIL}`} className="text-neutral-100/80 hover:text-white transition-colors">
                   {EMAIL}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-neutral-100/80 hover:text-white transition-colors"
+                >
+                  {WHATSAPP_NUMERO}
                 </a>
               </li>
               <li>
