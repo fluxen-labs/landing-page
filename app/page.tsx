@@ -373,7 +373,7 @@ export default function HomePage() {
                   rel="noopener noreferrer"
                   className="text-neutral-100/80 hover:text-white transition-colors"
                 >
-                  Instagram @fluxenlabs
+                  Instagram @fluxen.labs
                 </a>
               </li>
             </ul>
